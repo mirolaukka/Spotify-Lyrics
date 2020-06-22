@@ -11,15 +11,16 @@ from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 
 # Setup Spotify API Side
 
-CLIENT_ID = "" # Your client_id from spotify app
-CLIENT_SECRET = "" # Your client_secret from spotify app
+# If you need help with these, visit https://developer.spotify.com/documentation/web-api/
+CLIENT_ID = "CHANGE THIS" # Your client_id from spotify app
+CLIENT_SECRET = "CHANGE THIS" # Your client_secret from spotify app
 
 OAUTH_AUTHORIZE_URL = 'https://accounts.spotify.com/authorize'
 OAUTH_TOKEN_URL = 'https://accounts.spotify.com/api/token'
-REDIRECT_URI = '' # Your redirect uri from spotify app
+REDIRECT_URI = 'CHANGE THIS' # Your redirect uri from spotify app
 
 scope = "user-read-playback-state"
-username = "" # Your spotify username
+username = "CHANGE THIS" # Your spotify username
 
 auth_manager = SpotifyOAuth(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, redirect_uri = REDIRECT_URI, username=username, scope=scope)
 client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
@@ -27,7 +28,8 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager, auth
 
 
 # Genius
-GENIUS_API_TOKEN = ""
+# To get an API token, visit https://genius.com/api-clients and log in/sign up
+GENIUS_API_TOKEN = "CHANGE THIS"
 genius = lyricsgenius.Genius(GENIUS_API_TOKEN)
 
 
