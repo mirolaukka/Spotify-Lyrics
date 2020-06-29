@@ -72,7 +72,7 @@ class Window(QtWidgets.QWidget):
             self.title.setText(f"\"{song_name}\" by {', '.join([x['name'] for x in current_playback])}<hr>")
             self.lyrics.setText(song.lyrics)
         else:
-            raise ValueError('Lyricsn not found')
+            raise ValueError('Lyrics not found')
         
     def update_lyrics_failed(self, song_name, current_playback):
         self.title.setText(f"\"{song_name}\" by {', '.join([x['name'] for x in current_playback])}<hr>")
@@ -113,6 +113,6 @@ if __name__ == "__main__":
     # Loop update() every 2 seconds
     timer = QtCore.QTimer()
     timer.timeout.connect(update)
-    timer.start(2000)  # every 5000 milliseconds
+    timer.start(2000)  # every 2000 milliseconds
 
 sys.exit(App.exec_())
