@@ -5,7 +5,6 @@ import PyQt5.QtWidgets as QtWidgets
 from PyQt5.QtWidgets import * 
 from PyQt5 import QtCore 
 from PyQt5.QtGui import * 
-from time import sleep
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
 
 
